@@ -17,4 +17,9 @@ li {
   .form-group {
     margin-bottom: 5px;
   }
+  .col-sm {
+    position: relative;
+    align-content: center;
+    float: left;
+  }
   

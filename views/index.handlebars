@@ -1,40 +1,67 @@
- <a href="./assets/img/burger.png"> <img border="0" alt="burgeryum" src="./assets/img/burger.png" width="auto" height="200"> </a>
-
-<h1>Burgers!</h1>
-
-<h2>Burgers that are ready to be ordered!</h2>
-
-<ul>
-  {{#each burgers}}
-    {{#unless devoured}}
-      {{> burgers/burger-block devour=true}}
-    {{/unless}}
-  {{/each}}
-</ul>
-
-<h2>Burgers that are sold out!</h2>
-
-<ul>
-  {{#each burgers}}
-    {{#if devoured}}
-      {{> burgers/burger-block devour=false}}
-    {{/if}}
-  {{/each}}
-</ul>
-
-<h2>Add a Burger to the menu:</h2>
-<form class="create-form">
-
-  <div class="form-group">
-    <label for="burg">Burger Name:</label>
-    <input type="text" id="burg" name="name">
+<div class="jumbotron jumbotron-fluid">
+  <div class="container">
+    <h1 class="display-4">Burgers!</h1>
   </div>
+</div>
 
-  <div class="form-group">
-    <label for="devo">In stock now?</label><br>
-    <input type="radio" name="devoured" value="0" checked> In stock now!<br>
-    <input type="radio" name="devoured" value="1">Not yet in stock
+<div class="main_container">
+  <div class="row">
+    <div class="col-sm">
+      <div class="card" style="width: 18rem;">
+        <img class="card-img-top" src="./assets/img/burger.png" alt="Card image cap" width="auto" height="200">
+        <div class="card-body">
+          <p class="card-text">
+            <h2>Order a Burger!</h2>
+          </p>
+        </div>
+        <ul>
+          {{#each burgers}}
+          {{#unless devoured}}
+          {{> burgers/burger-block devour=true}}
+          {{/unless}}
+          {{/each}}
+        </ul>
+      </div>
+    </div>
+
+    <div class="col-sm">
+      <div class="card" style="width: 18rem;">
+        <img class="card-img-top" src="./assets/img/sold_out.png" alt="Card image cap" width="auto" height="200">
+        <div class="card-body">
+          <p class="card-text">
+            <h2>Burgers that are sold out!</h2>
+          </p>
+        </div>
+        <ul>
+          {{#each burgers}}
+          {{#if devoured}}
+          {{> burgers/burger-block devour=false}}
+          {{/if}}
+          {{/each}}
+        </ul>
+      </div>
+    </div>
+
+    <div class="col-sm">
+      <div class="card" style="width: 18rem;">
+        <img class="card-img-top" src="./assets/img/Add_burger.jpg" alt="Card image cap" width="auto" height="200">
+        <div class="card-body">
+          <p class="card-text">
+            <h2>Add a Burger to the menu:</h2>
+            <form class="create-form">
+              <div class="form-group">
+                <label for="burg">Burger Name:</label>
+                <input type="text" id="burg" name="name">
+              </div>
+              <div class="form-group">
+                <label for="devo">In stock now?</label><br>
+                <input type="radio" name="devoured" value="0" checked> In stock now!<br>
+                <input type="radio" name="devoured" value="1">Not yet in stock
+              </div>
+              <button type="submit" id="addburg">Add Burger</button>
+            </form>
+        </div>
+      </div>
+    </div>
   </div>
-
-  <button type="submit">Add Burger</button>
-</form>
+</div>

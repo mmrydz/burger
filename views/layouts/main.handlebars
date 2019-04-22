@@ -1,18 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<meta charset="UTF-8">
-		{{!-- <link rel="stylesheet" href="/assets/css/style.css" type="text/css" /> --}}
-		<title>MVC With Burgers!</title>
-		<script src="https://code.jquery.com/jquery.js"></script>
-		<script src="/assets/js/burgers.js"></script>
-	<style>
-		.window {
-			background-color: goldenrod;
-		};
+	{{!-- <link rel="stylesheet" href="/assets/css/style.css" type="text/css" /> --}}
+	<title>MVC With Burgers!</title>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+	<link href="https://fonts.googleapis.com/css?family=Neucha" rel="stylesheet">
+	<script src="https://code.jquery.com/jquery.js"></script>
+	<script src="/assets/js/burgers.js"></script>
+	<style>	
+		.jumbotron {
+			background: red;
+			color: white;
+			text-align: center;
+			padding-top: 15px;
+			padding-bottom: 15px;
+			max-width: 80%;
+			height: 150px;
+			font-size: 2em;
+			font-family: 'Neucha', cursive;
+		}
+
+		.change-devoured,
+		#addburg,
+		.delete-burger {
+			font-family: 'Neucha', cursive;
+		}
+
+		.main_container {
+			align-content: center;
+			max-width: 80%;
+			margin-left: 5%;
+			margin-right: 5%;
+			font-family: 'Neucha', cursive;
+		}
+		
+		li {
+			padding: 5px;
+			margin: 5px;
+		}
+
+		.label {
+			font-weight: bold;
+		}
+
+		.create-update-form {
+			padding: 5px;
+			margin: 5px;
+		}
+
+		.col-sm {
+			position: relative;
+			align-content: center;
+			float: left;
+			margin: 10px;
+		}
 	</style>
-	</head>
-	<body>
-		{{{ body }}}
-	</body>
+</head>
+
+<body>
+	{{{ body }}}
+</body>
+
 </html>
