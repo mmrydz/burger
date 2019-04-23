@@ -8,5 +8,5 @@ When the user arrives at the root page, a list is rendered of burgers that are r
 
 The code is housed on GitHub here: https://github.com/mmrydz/burger.
 
-The app was deployed to Heroku here: (TBD).
+The app was deployed to Heroku here: https://afternoon-bastion-85962.herokuapp.com/.
 
